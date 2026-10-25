@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Board Study Engine</title>
+<title>Oswald Study Engine</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
@@ -280,7 +280,7 @@
 <div class="app">
   <header class="riveted">
     <svg class="gear" id="gear"><use href="#cog"/></svg>
-    <div class="plate"><h1>BOARD</h1><small>STUDY ENGINE</small></div>
+    <div class="plate"><h1>OSWALD</h1><small>STUDY ENGINE</small></div>
     <span class="muted small" id="link">Connecting to the hub…</span>
     <div class="lamps">
       <span class="lamp" id="keysLamp">Fingers</span>
@@ -313,7 +313,7 @@
     <div id="stage">
       <div class="welcome" id="welcome">
         <h2>Load the engine</h2>
-        <p>Add your lecture slides, PDFs, Word or Pages files, or a link to a web page. Board lays every one out
+        <p>Add your lecture slides, PDFs, Word or Pages files, or a link to a web page. Every one is laid out
           as pages, so your index finger turns them. Oswald reads along and writes your notes,
           study guides, quizzes and flashcards.</p>
         <div class="row">
@@ -1315,7 +1315,7 @@ async function startHearing() {
   const Speech = window.SpeechRecognition || window.webkitSpeechRecognition;
   const safari = /Safari/.test(navigator.userAgent) && !/Chrome|Chromium|Edg/.test(navigator.userAgent);
   if (!Speech || safari) { if (!showOnly) note("Voice needs Chrome or Edge, not Safari. Open http://localhost:8000 in Chrome."); return; }
-  if (!window.isSecureContext) { if (!showOnly) note("Open Board at http://localhost:8000 so the mic is allowed."); return; }
+  if (!window.isSecureContext) { if (!showOnly) note("Open Oswald at http://localhost:8000 so the mic is allowed."); return; }
   recognizer = "starting";
   const ok = await askForMic(showOnly);
   recognizer = null;
