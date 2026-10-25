@@ -1,0 +1,6 @@
+hub/.env
+hub/settings.json
+hub/library/
+__pycache__/
+*.pyc
+.DS_Store
